@@ -49,7 +49,7 @@ public class SecurityConfiguration {
         return http
                 .httpBasic(Customizer.withDefaults())
                 .authorizeHttpRequests(auth -> {
-                    auth.anyRequest().permitAll();
+                    auth.anyRequest().authenticated();
                 })
                 .build();
     }

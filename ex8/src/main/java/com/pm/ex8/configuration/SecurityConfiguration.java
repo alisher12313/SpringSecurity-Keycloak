@@ -88,68 +88,70 @@ public class SecurityConfiguration {
                 .build();
     }
 
-    @Bean
-    public UserDetailsService userDetailsService() {
-        var u = User.withUsername("user")
-                .password(passwordEncoder().encode("password"))
-                .authorities("read")
-                .build();
-
-        return new InMemoryUserDetailsManager(u);
-    }
+//    @Bean
+//    public UserDetailsService userDetailsService() {
+//        var u = User.withUsername("user")
+//                .password(passwordEncoder().encode("password"))
+//                .authorities("read")
+//                .build();
+//
+//        return new InMemoryUserDetailsManager(u);
+//    } Actual bean of UserDetailsService for user is not in CustomUserDetailsService
 
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    @Bean
-    public RegisteredClientRepository registeredClientRepository() {
-        // This creates one OAuth2 client application.
-        // The client is not the human user.
-        // The client is the app that requests tokens from Authorization Server.
-        RegisteredClient r1 = RegisteredClient.withId(UUID.randomUUID().toString())
+//    @Bean
+//    public RegisteredClientRepository registeredClientRepository() {
+//        // This creates one OAuth2 client application.
+//        // The client is not the human user.
+//        // The client is the app that requests tokens from Authorization Server.
+//        RegisteredClient r1 = RegisteredClient.withId(UUID.randomUUID().toString())
+//
+//                // OAuth2 client id.
+//                // Used in /oauth2/authorize URL as client_id=client.
+//                .clientId("client")
+//
+//                // OAuth2 client secret.
+//                // Used in Postman Basic Auth when calling /oauth2/token.
+//                .clientSecret(passwordEncoder().encode("secret"))
+//
+//                // Allowed OIDC/OAuth2 scopes.
+//                // openid is required for OpenID Connect.
+//                // profile asks for basic user profile info.
+//                .scope(OidcScopes.OPENID)
+//                .scope(OidcScopes.PROFILE)
+//
+//                // Where Authorization Server redirects after login.
+//                // Must exactly match redirect_uri in your authorization URL.
+//                .redirectUri("https://springone.io/authorized")
+//
+//                // Client must authenticate with Basic Auth at /oauth2/token.
+//                // Username: client
+//                // Password: secret
+//                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+//
+//                // This client can use Authorization Code flow.
+//                .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
+//
+//                // This client can receive refresh tokens.
+//                .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
+//                .tokenSettings(TokenSettings.builder()
+//                        // Access token will expire after 15 minutes
+//                        .accessTokenTimeToLive(Duration.ofSeconds(900))
+//                        // makes it OPAQUE token
+//                        //means: Do not create a readable JWT access token.
+//                        //Create a random-looking token value.
+//                        .accessTokenFormat(OAuth2TokenFormat.REFERENCE)
+//                        .build())
+//                .build();
+//
+//        return new InMemoryRegisteredClientRepository(r1);
+//    } again replaced by CustomClientService
 
-                // OAuth2 client id.
-                // Used in /oauth2/authorize URL as client_id=client.
-                .clientId("client")
 
-                // OAuth2 client secret.
-                // Used in Postman Basic Auth when calling /oauth2/token.
-                .clientSecret(passwordEncoder().encode("secret"))
-
-                // Allowed OIDC/OAuth2 scopes.
-                // openid is required for OpenID Connect.
-                // profile asks for basic user profile info.
-                .scope(OidcScopes.OPENID)
-                .scope(OidcScopes.PROFILE)
-
-                // Where Authorization Server redirects after login.
-                // Must exactly match redirect_uri in your authorization URL.
-                .redirectUri("https://springone.io/authorized")
-
-                // Client must authenticate with Basic Auth at /oauth2/token.
-                // Username: client
-                // Password: secret
-                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
-
-                // This client can use Authorization Code flow.
-                .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-
-                // This client can receive refresh tokens.
-                .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
-                .tokenSettings(TokenSettings.builder()
-                        // Access token will expire after 15 minutes
-                        .accessTokenTimeToLive(Duration.ofSeconds(900))
-                        // makes it OPAQUE token
-                        //means: Do not create a readable JWT access token.
-                        //Create a random-looking token value.
-                        .accessTokenFormat(OAuth2TokenFormat.REFERENCE)
-                        .build())
-                .build();
-
-        return new InMemoryRegisteredClientRepository(r1);
-    }
 
     @Bean
     public AuthorizationServerSettings authorizationServerSettings(){

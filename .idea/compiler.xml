@@ -17,6 +17,9 @@
         <module name="ex1" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ex9" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -28,6 +31,7 @@
       <module name="ex6" options="-parameters" />
       <module name="ex7" options="-parameters" />
       <module name="ex8" options="-parameters" />
+      <module name="ex9" options="-parameters" />
     </option>
   </component>
 </project>

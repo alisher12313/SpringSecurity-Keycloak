@@ -13,13 +13,11 @@
         <module name="ex5" />
         <module name="ex8" />
         <module name="ex7" />
+        <module name="ex9" />
         <module name="ex2" />
         <module name="ex1" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ex9" target="21" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

@@ -151,8 +151,6 @@ public class SecurityConfiguration {
 //        return new InMemoryRegisteredClientRepository(r1);
 //    } again replaced by CustomClientService
 
-
-
     @Bean
     public AuthorizationServerSettings authorizationServerSettings(){
         // Uses default Authorization Server settings.

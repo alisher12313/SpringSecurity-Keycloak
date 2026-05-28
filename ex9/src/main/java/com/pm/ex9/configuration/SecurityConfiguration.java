@@ -18,8 +18,8 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.oauth2ResourceServer(r -> {
-            r.jwt( jwt ->
-                jwt.jwkSetUri(jwksUri)
+            r.jwt(jwt ->
+                    jwt.jwkSetUri(jwksUri).jwtAuthenticationConverter(new CustomJwtAuthenticationTokenConverter())
             );
         });
 

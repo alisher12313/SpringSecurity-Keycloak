@@ -10,4 +10,6 @@ public class Ex10Application {
 		SpringApplication.run(Ex10Application.class, args);
 	}
 
+
+
 }

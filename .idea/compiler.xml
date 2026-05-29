@@ -14,6 +14,9 @@
         <module name="ex8" />
         <module name="ex7" />
         <module name="ex9" />
+        <module name="ex8-rs" />
+        <module name="ex8 (1)" />
+        <module name="ex8 (2)" />
         <module name="ex10" />
         <module name="ex2" />
         <module name="ex1" />
@@ -31,6 +34,9 @@
       <module name="ex6" options="-parameters" />
       <module name="ex7" options="-parameters" />
       <module name="ex8" options="-parameters" />
+      <module name="ex8 (1)" options="-parameters" />
+      <module name="ex8 (2)" options="-parameters" />
+      <module name="ex8-rs" options="-parameters" />
       <module name="ex9" options="-parameters" />
     </option>
   </component>

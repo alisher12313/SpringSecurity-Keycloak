@@ -14,6 +14,7 @@
         <module name="ex8" />
         <module name="ex7" />
         <module name="ex9" />
+        <module name="ex10" />
         <module name="ex2" />
         <module name="ex1" />
       </profile>
@@ -22,6 +23,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ex1" options="-parameters" />
+      <module name="ex10" options="-parameters" />
       <module name="ex2" options="-parameters" />
       <module name="ex3" options="-parameters" />
       <module name="ex4" options="-parameters" />

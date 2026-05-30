@@ -17,6 +17,7 @@
         <module name="ex8-rs" />
         <module name="ex8 (1)" />
         <module name="ex8 (2)" />
+        <module name="ex11" />
         <module name="ex10" />
         <module name="ex2" />
         <module name="ex1" />
@@ -27,6 +28,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="ex1" options="-parameters" />
       <module name="ex10" options="-parameters" />
+      <module name="ex11" options="-parameters" />
       <module name="ex2" options="-parameters" />
       <module name="ex3" options="-parameters" />
       <module name="ex4" options="-parameters" />

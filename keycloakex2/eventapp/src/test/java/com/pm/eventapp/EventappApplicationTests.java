@@ -1,13 +1,13 @@
-package com.pm.keycloakex2;
+package com.pm.eventapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Keycloakex2ApplicationTests {
+class EventappApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+	@Test
+	void contextLoads() {
+	}
 
 }

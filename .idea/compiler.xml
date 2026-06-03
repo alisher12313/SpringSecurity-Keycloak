@@ -22,6 +22,7 @@
         <module name="ex10" />
         <module name="ex2" />
         <module name="ex1" />
+        <module name="keycloakex2" />
       </profile>
     </annotationProcessing>
   </component>
@@ -42,6 +43,7 @@
       <module name="ex8-rs" options="-parameters" />
       <module name="ex9" options="-parameters" />
       <module name="keycloakex1" options="-parameters" />
+      <module name="keycloakex2" options="-parameters" />
     </option>
   </component>
 </project>

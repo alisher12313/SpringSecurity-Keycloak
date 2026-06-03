@@ -15,6 +15,7 @@
         <module name="ex7" />
         <module name="ex9" />
         <module name="ex8-rs" />
+        <module name="eventapp" />
         <module name="ex8 (1)" />
         <module name="ex8 (2)" />
         <module name="ex11" />
@@ -28,6 +29,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eventapp" options="-parameters" />
       <module name="ex1" options="-parameters" />
       <module name="ex10" options="-parameters" />
       <module name="ex11" options="-parameters" />

@@ -1,5 +1,6 @@
 package com.pm.eventapp.service;
 
+import com.pm.eventapp.client.NotificationClient;
 import com.pm.eventapp.dto.EventDto;
 import com.pm.eventapp.dto.EventPageDto;
 import com.pm.eventapp.dto.EventType;
@@ -18,6 +19,7 @@ import java.util.stream.IntStream;
 public class EventService {
 
     private final Random random = new Random();
+    private final NotificationClient notificationClient;
     private static final int TOTAL_EVENTS = 1000;
 
     public EventPageDto getEvents(int page, int size) {
@@ -43,6 +45,7 @@ public class EventService {
                 "message", message
         );
 
+        notificationClient.sendNotification(notification);
         log.info("IN save - notification sent for event: {}", eventDto.uid());
 
         return eventDto;

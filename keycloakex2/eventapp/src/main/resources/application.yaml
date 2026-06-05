@@ -7,14 +7,24 @@ spring:
             provider: keycloak
             client-id: eventapp
             authorization-grant-type: authorization_code
+            client-secret: FKAecTDycYu34a5o1xFaJuq6DrrxFVw9
             scope:
               - openid
               - profile
               - email
 
+          notification-m2m:
+            provider: keycloak
+            client-id: notificationapp
+            client-secret: MaPViVkPC01hlr77j8h6qucMHDgOsXAT
+            authorization-grant-type: client_credentials
+            scope:
+              - openid
+
         provider:
           keycloak:
             issuer-uri: http://localhost:9090/realms/proselyte
+            token-uri: http://localhost:9090/realms/proselyte/protocol/openid-connect/token
 
       resourceserver:
         jwt:
@@ -22,3 +32,6 @@ spring:
 
 server:
   port: 8091
+
+notificationapp:
+  url: http://localhost:8092

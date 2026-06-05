@@ -15,6 +15,7 @@
         <module name="ex7" />
         <module name="ex9" />
         <module name="ex8-rs" />
+        <module name="notificationApp" />
         <module name="eventapp" />
         <module name="ex8 (1)" />
         <module name="ex8 (2)" />
@@ -46,6 +47,7 @@
       <module name="ex9" options="-parameters" />
       <module name="keycloakex1" options="-parameters" />
       <module name="keycloakex2" options="-parameters" />
+      <module name="notificationApp" options="-parameters" />
     </option>
   </component>
 </project>

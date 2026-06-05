@@ -21,6 +21,7 @@
         <option value="$PROJECT_DIR$/keycloakex1/pom.xml" />
         <option value="$PROJECT_DIR$/keycloakex2/pom.xml" />
         <option value="$PROJECT_DIR$/keycloakex2/eventapp/pom.xml" />
+        <option value="$PROJECT_DIR$/keycloakex2/notificationApp/pom.xml" />
       </list>
     </option>
   </component>
